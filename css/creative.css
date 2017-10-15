@@ -510,6 +510,8 @@ img::-moz-selection {
 img {
     opacity: 1.0;
     filter: alpha(opacity=100); /* For IE8 and earlier */
+    display: inline-block;
+    vertical-align: middle;
 }
 
 img:hover {
@@ -528,10 +530,19 @@ li {
 }
 
 .socialmedia {
-  font-size: 30px;
+  font-size: 28px;
   color: #FF6600;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.contact {
+  font-size: 28px;
+  color: #FF6600;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #particles-js {
@@ -563,10 +574,14 @@ li {
 }
 
 .painting {
-  width: 300px;
+  max-width: 80%;
+  max-height: 400px;
+  display: inline-block;
+  vertical-align: middle;
   margin-bottom: 40px;
 }
 
 .painting-landscape {
-  margin-top: 110px;
+  display: inline-block;
+  vertical-align: middle;
 }
