@@ -115,6 +115,7 @@ aside {
 }
 
 .navbar-default .navbar-header .navbar-brand {
+    background-color: #fff;
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-size: 16px;
@@ -124,11 +125,13 @@ aside {
 
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
+    background-color: #fff;
     color: #FF6600;
 }
 
 .navbar-default .nav > li>a,
 .navbar-default .nav>li>a:focus {
+    background-color: #fff;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 600;
@@ -139,41 +142,46 @@ aside {
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
+    background-color: #fff;
     color: #222;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
     color: #222!important;
-    background-color: transparent;
+    background-color: #fff;
 }
 
 .navbar-default .nav > li.active>a:hover,
 .navbar-default .nav>li.active>a:focus:hover {
-    background-color: transparent;
+    background-color: #fff;
 }
 
 @media(min-width:768px) {
     .navbar-default {
-        background-color: transparent;
+        background-color: #fff;
     }
 
     .navbar-default .navbar-header .navbar-brand {
+        background-color: #fff;
         color: #FF6600;
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
+        background-color: #fff;
         color: #FF6600;
     }
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
+        background-color: #fff;
         color: #FF6600;
     }
 
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
+        background-color: #fff;
         color: #222;
     }
 
@@ -185,20 +193,24 @@ aside {
     .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 16px;
         color: #FF6600;
+        background-color: #fff;
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
+        background-color: #fff;
         color: #FF6600;
     }
 
     .navbar-default.affix .nav > li>a,
     .navbar-default.affix .nav>li>a:focus {
+        background-color: #fff;
         color: #FF6600;
     }
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
+        background-color: #fff;
         color: #222;
     }
 }
@@ -479,8 +491,7 @@ fieldset[disabled] .btn-primary.active {
 
 .btn {
     border: 0;
-    border-radius: 300px;
-    text-transform: uppercase;
+    border-radius: 5px;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
 }
