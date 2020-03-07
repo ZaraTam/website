@@ -55,7 +55,7 @@ nav .socials {
 }
 
 .navbar-toggler {
-    color: red;
+    color: orangered;
     background-color: transparent;
     display: inline-block;
     margin-top: 12.5px;
@@ -119,8 +119,8 @@ ul {
 
 a.btn.btn-primary {
     background-color: #fff;
-    border-color: red;
-    color: red;
+    border-color: orangered;
+    color: orangered;
     margin-right: 0.4rem;
 }
 
