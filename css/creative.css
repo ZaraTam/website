@@ -124,6 +124,11 @@ a.btn.btn-primary {
     margin-right: 0.4rem;
 }
 
+a.btn.btn-primary:hover {
+    border-color: #282828;
+    color: #282828;
+}
+
 blockquote {
     margin: 4rem 0rem;
 }
