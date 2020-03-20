@@ -4,7 +4,7 @@ body {
 }
 
 a:link, a:active, a:visited {
-    color: orangered;
+    color: #ff4500;
 }
 
 a:hover {
@@ -55,7 +55,7 @@ nav .socials {
 }
 
 .navbar-toggler {
-    color: orangered;
+    color: #ff4500;
     background-color: transparent;
     display: inline-block;
     margin-top: 12.5px;
@@ -99,15 +99,14 @@ ul {
 
 .card.art {
     width: 18rem;
-    margin: 2rem 2rem 4rem;
+    /* margin: 2rem 2rem 4rem; */
     border-style: none;
     display: inline-flex;
 
 }
 
 .card.photography {
-    width: 28rem;
-    margin: 2rem 2rem 4rem;
+    margin: 2rem 0rem;
     border-style: none;
     display: inline-flex;
 
@@ -119,8 +118,8 @@ ul {
 
 a.btn.btn-primary {
     background-color: #fff;
-    border-color: orangered;
-    color: orangered;
+    border-color: #ff4500;
+    color: #ff4500;
     margin-right: 0.4rem;
 }
 
