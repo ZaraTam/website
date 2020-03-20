@@ -98,8 +98,7 @@ ul {
 }
 
 .card.art {
-    width: 18rem;
-    /* margin: 2rem 2rem 4rem; */
+    margin: 2rem 0rem;
     border-style: none;
     display: inline-flex;
 }
