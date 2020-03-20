@@ -81,7 +81,7 @@ p {
 }
 
 li {
-    display: inline;
+    display: inline-block;
 }
 
 ul {
@@ -92,7 +92,7 @@ ul {
 
 .card.code {
     width: 18rem;
-    margin: 2rem 2rem 4rem;
+    margin: 2rem 2rem 2rem 0rem;
     border-radius: 0.5rem;
     display: inline-flex;
 }
