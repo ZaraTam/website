@@ -14,4 +14,4 @@ https://zaratam.github.io/website/
 
 ## Licence
 
-This project is licensed under the MIT License - see [LICENSE](https://github.com/ZaraTam/website/commit/ac47b4d56f48db1c4d5ad6d4d42f67b68c10de99) for details
+This project is licensed under the MIT License - see [LICENSE](https://github.com/ZaraTam/website/blob/master/LICENSE) for details
