@@ -11,25 +11,6 @@ a:hover {
     color: #282828;
 }
 
-header {
-    margin-top: 2.5rem;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-}
-
-header h1 {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    padding: 0% 10%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    vertical-align: middle;
-    text-align: center;
-}
-
 .navbar {
     background-color: #fff;
     border-bottom: 1px solid #e8e8e8;
@@ -151,4 +132,8 @@ section .socials {
     border-radius: 100px;
     padding: 1rem;
     margin: 1rem 0rem 3rem;
+}
+
+footer {
+    background-color: #000;
 }
