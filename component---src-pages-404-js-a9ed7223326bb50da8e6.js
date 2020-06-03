@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{w2l6:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),l=a.n(n),r=a("Wbzz"),c=a("Bl7J"),o=a("vrFN");a("XjQp");t.default=function(){return l.a.createElement(c.a,null,l.a.createElement(o.a,{title:"Zara Tam"}),l.a.createElement("main",null,l.a.createElement("section",{class:"error"},l.a.createElement("h1",null,"¯\\_(ツ)_/¯"),l.a.createElement("p",null,l.a.createElement(r.Link,{to:"#top"},"Go back")," to somewhere nice"))))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-a9ed7223326bb50da8e6.js.map
