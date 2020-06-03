@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/website-2",
+  pathPrefix: "/website",
   siteMetadata: {
     title: `Zara Tam`,
     description: `A parallel universe where magic happens`,
