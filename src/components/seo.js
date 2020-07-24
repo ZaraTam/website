@@ -33,7 +33,12 @@ const SEO = () => {
       <meta name="description" content={description} />
       <meta name="image" content={image} />
 
-      <script async defer src="https://alysis.alexsparrow.dev/tracker.js" data-alysis-domain="zaratam.com">
+      <script
+        async
+        defer
+        src="https://alysis.alexsparrow.dev/tracker.js"
+        data-alysis-domain="zaratam.com"
+      />
 
       {/* Schema.org markup for Google+ */}
       <meta itemprop="name" content={title} />
