@@ -27,9 +27,6 @@ const Layout = ({ children }) => {
           crossorigin="anonymous"
         ></script>
 
-        {/* Custom CSS */}
-        {/* <link rel="stylesheet" href="css/creative.css" type="text/css" /> */}
-
         {/* Custom Fonts */}
         <link
           rel="stylesheet"
