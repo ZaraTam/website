@@ -1,11 +1,9 @@
 # Website
 
-This is my personal website built with React, Gatsby, and Bootstrap, hosted on GitHub Pages
+This is my personal website built with Jekyll, hosted on GitHub Pages
 
 URL:
-[zaratam.com](http://zaratam.com)
-
-or https://zaratam.github.io/website/
+[zaratam.com](http://zaratam.com) or https://zaratam.github.io/website/
 <br>
 
 ## Licence
