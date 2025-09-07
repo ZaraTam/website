@@ -21,18 +21,19 @@
 title: "Zara Tam"
 description: >- # this means to ignore newlines
  "Where magic happens"
-url: "https://zaratam.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://zaratam.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/website" # the subpath of your site, e.g. /blog
 lang: "en_GB"
 social:
   linkedin: "zaratam"
   github: "zaratam"
-  twitter: "zaratam"
 robots: "index, follow"
 
 # Build settings
 plugins:
   - jekyll-seo-tag
+
+# Remove Twitter configuration completely to avoid Twitter card generation
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -14,7 +14,30 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    {% seo %}
+    
+    <!-- Custom SEO tags without Twitter -->
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "{% if page.url == '/' %}WebSite{% else %}WebPage{% endif %}",
+      "name": "{{ site.title }}",
+      "headline": "{{ page.title }}",
+      "description": "{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}",
+      "url": "{{ page.url | absolute_url }}"
+    }
+    </script>
   </head>
   <body>
     {% include navigation.html %}

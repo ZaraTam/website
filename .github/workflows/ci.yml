@@ -1,0 +1,70 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Test HTML
+        run: |
+          gem install html-proofer
+          htmlproofer ./_site --disable-external --check-html --allow-hash-href
+
+      - name: Check for broken links (internal only)
+        run: |
+          htmlproofer ./_site --disable-external --check-links
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install markdownlint
+        run: npm install -g markdownlint-cli
+
+      - name: Lint Markdown files
+        run: markdownlint "*.md" "_posts/*.md" --ignore node_modules
+
+      - name: Check YAML files
+        run: |
+          sudo apt-get install yamllint
+          find . -name "*.yml" -o -name "*.yaml" | xargs yamllint
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run bundle audit
+        run: |
+          gem install bundler-audit
+          bundle audit --update
