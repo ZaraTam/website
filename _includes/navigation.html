@@ -1,7 +1,16 @@
-<nav>
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link | relative_url }}" {% if page.url == item.link %} style="color: #0056b3;"{% endif %}>
-      {{ item.name }}
-    </a>
-  {% endfor %}
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <ul class="nav-links" role="list">
+      {% for item in site.data.navigation %}
+        <li role="listitem">
+          <a href="{{ item.link | relative_url }}" 
+             class="nav-link{% if page.url == item.link %} active{% endif %}"
+             {% if page.url == item.link %}aria-current="page"{% endif %}>
+            {{ item.name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </nav>
+

@@ -20,15 +20,26 @@
 
 title: "Zara Tam"
 description: >- # this means to ignore newlines
- "Where magic happens"
+ Product leader, engineer, and artist. Curious. Ambitious. Entrepreneurial. Building technologies that solve complex problems at scale.
 url: "https://zaratam.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/website" # the subpath of your site, e.g. /blog
 lang: "en_GB"
 social:
   linkedin: "zaratam"
   github: "zaratam"
-  twitter: "zaratam"
 robots: "index, follow"
+
+# SEO and Performance
+image: /assets/images/social-preview.jpg
+author:
+  name: "Zara Tam"
+  links:
+    - "https://github.com/zaratam"
+    - "https://linkedin.com/in/zaratam"
+
+# Disable Twitter cards
+twitter:
+  card: false
 
 # Build settings
 plugins:

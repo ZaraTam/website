@@ -1,0 +1,72 @@
+/* Responsive design styles */
+
+@media (max-width: 768px) {
+  body {
+    padding: 0 20px;
+  }
+  
+  /* Navigation responsive */
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Home page responsive */
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .hero-description {
+    font-size: 1.125rem;
+  }
+  
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievement-card {
+    padding: 32px 24px;
+  }
+  
+  /* Projects responsive */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-bar {
+    padding: 16px;
+  }
+  
+  .filter-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .filter-label {
+    min-width: auto;
+  }
+  
+  /* Art gallery responsive */
+  .art-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card,
+  .artwork-card {
+    margin-bottom: 24px;
+  }
+}
