@@ -1,0 +1,165 @@
+/* Projects/Code page styles */
+
+/* Filter Bar */
+.filter-bar {
+  margin-bottom: 40px;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-weight: 600;
+  color: #374151;
+  min-width: 100px;
+  font-size: 0.875rem;
+}
+
+.filter-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-tag {
+  padding: 6px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  background: white;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-tag:hover {
+  border-color: #4169E1;
+  color: #4169E1;
+  background: rgba(3, 105, 161, 0.05);
+}
+
+.filter-tag.active {
+  background: #4169E1;
+  color: white;
+  border-color: #4169E1;
+  box-shadow: 0 2px 4px rgba(3, 105, 161, 0.2);
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+  margin-bottom: 60px;
+}
+
+.project-card {
+  @extend .card;
+  padding: 32px;
+}
+
+.project-header {
+  margin-bottom: 20px;
+}
+
+.project-header h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+/* Tech Badges */
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Tech badge colors organized by category */
+
+/* Programming Languages - Yellow/Amber theme */
+.tech-badge.python { background: #fef3c7; color: #92400e; }
+.tech-badge.javascript { background: #fef3c7; color: #92400e; }
+
+/* Web Technologies - Blue theme */
+.tech-badge.html5 { background: #f0f9ff; color: #1e40af; }
+.tech-badge.css3 { background: #f0f9ff; color: #1e40af; }
+.tech-badge.flask { background: #f0f9ff; color: #1e40af; }
+.tech-badge.jinja { background: #f0f9ff; color: #1e40af; }
+.tech-badge.jekyll { background: #f0f9ff; color: #1e40af; }
+.tech-badge.sass { background: #f0f9ff; color: #1e40af; }
+.tech-badge.web-development { background: #f0f9ff; color: #1e40af; }
+.tech-badge.rest-api { background: #f0f9ff; color: #1e40af; }
+.tech-badge.responsive-design { background: #f0f9ff; color: #1e40af; }
+
+/* Data Science & Analytics - Green theme */
+.tech-badge.numpy { background: #ecfdf5; color: #065f46; }
+.tech-badge.pandas { background: #ecfdf5; color: #065f46; }
+.tech-badge.matplotlib { background: #ecfdf5; color: #065f46; }
+.tech-badge.data-analysis { background: #ecfdf5; color: #065f46; }
+.tech-badge.data-visualization { background: #ecfdf5; color: #065f46; }
+
+/* Algorithms & Computing - Yellow/Amber theme */
+.tech-badge.machine-learning { background: #fef3c7; color: #92400e; }
+.tech-badge.algorithms { background: #fef3c7; color: #92400e; }
+.tech-badge.animation { background: #fef3c7; color: #92400e; }
+
+/* Specialized Technologies - Purple theme */
+.tech-badge.image-processing { background: #ede9fe; color: #6b21a8; }
+.tech-badge.physics { background: #ede9fe; color: #6b21a8; }
+
+/* Creative Technologies - Pink theme */
+.tech-badge.generative-art { background: #fdf2f8; color: #be185d; }
+
+/* Project Description */
+.project-description {
+  margin-bottom: 20px;
+}
+
+.project-description p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.project-impact {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #4169E1;
+}
+
+.project-impact strong {
+  color: #4169E1;
+  font-weight: 600;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}

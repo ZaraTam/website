@@ -1,0 +1,201 @@
+/* Home page specific styles */
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 80px 0 40px 0;
+  margin-bottom: 80px;
+  background: linear-gradient(135deg, #fafbfc 0%, #f8fafc 100%);
+  border-radius: 24px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #4169E1;
+  margin-bottom: 24px;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0 0 40px 0;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.scroll-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.scroll-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(3, 105, 161, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.scroll-arrow:hover {
+  background: rgba(3, 105, 161, 0.2);
+  transform: translateY(-2px);
+}
+
+.scroll-arrow i {
+  color: #4169E1;
+  font-size: 1.2rem;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Interests Section */
+.interests-section {
+  margin-bottom: 80px;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.interest-card {
+  @extend .card;
+  padding: 32px;
+  text-align: left;
+}
+
+.interest-card i {
+  font-size: 2rem;
+  color: #4169E1;
+  margin-bottom: 20px;
+}
+
+.interest-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 12px;
+}
+
+.interest-card p {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Experience Section */
+.experience-section {
+  margin-bottom: 80px;
+}
+
+.experience-subsections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.experience-subsection {
+  @extend .card;
+  padding: 32px;
+  text-align: left;
+}
+
+.experience-subsection i {
+  font-size: 2rem;
+  color: #4169E1;
+  margin-bottom: 20px;
+}
+
+.experience-subsection h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 12px;
+}
+
+.experience-subsection p {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Achievements Section */
+.achievements-section {
+  margin-bottom: 80px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+}
+
+.achievement-card {
+  @extend .card;
+  padding: 40px;
+  text-align: left;
+}
+
+.achievement-card i {
+  font-size: 2rem;
+  color: #4169E1;
+  margin-bottom: 20px;
+}
+
+.achievement-content h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 12px;
+}
+
+.achievement-content p {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
