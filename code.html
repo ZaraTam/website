@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Zara Tam</title>
+    <title>Zara Tam | Product Leader, Engineer & Artist</title>
 
     <!-- Favicon Links -->
     <link rel="icon" href="/website/assets/images/favicons/favicon.ico" type="image/x-icon">
@@ -14,72 +14,172 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/website/assets/css/main.css">
-    <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Zara Tam | “Where magic happens”</title>
-<meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Zara Tam" />
-<meta property="og:locale" content="en_GB" />
-<meta name="description" content="“Where magic happens”" />
-<meta property="og:description" content="“Where magic happens”" />
-<link rel="canonical" href="https://zaratam.github.io//website/code" />
-<meta property="og:url" content="https://zaratam.github.io//website/code" />
-<meta property="og:site_name" content="Zara Tam" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Zara Tam" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"“Where magic happens”","headline":"Zara Tam","url":"https://zaratam.github.io//website/code"}</script>
-<!-- End Jekyll SEO tag -->
-
+    
+    <!-- Custom SEO tags without Twitter -->
+    <meta name="description" content=""Where magic happens"">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://localhost:4000/website/code">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Zara Tam | Product Leader, Engineer & Artist">
+    <meta property="og:description" content=""Where magic happens"">
+    <meta property="og:url" content="http://localhost:4000/website/code">
+    <meta property="og:site_name" content="Zara Tam">
+    <meta property="og:type" content="website">
+    
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Zara Tam",
+      "headline": "Zara Tam | Product Leader, Engineer & Artist",
+      "description": ""Where magic happens"",
+      "url": "http://localhost:4000/website/code"
+    }
+    </script>
   </head>
   <body>
     <nav>
-  
-    <a href="/website/" >
-      Home
-    </a>
-  
-    <a href="/website/code"  style="color: #0056b3;">
-      Code
-    </a>
-  
-    <a href="/website/art" >
-      Art
-    </a>
-  
+  <ul>
+    
+      <li>
+        <a href="/website/" >
+          Home
+        </a>
+      </li>
+    
+      <li>
+        <a href="/website/code"  class="active">
+          Code
+        </a>
+      </li>
+    
+      <li>
+        <a href="/website/art" >
+          Art
+        </a>
+      </li>
+    
+  </ul>
 </nav>
 
     <h1><span class="underline">Code</span></h1>
 
-<h3 id="art-of-the-moment">Art of the moment</h3>
+<div class="projects-grid">
+  <div class="project-card" data-tech="python flask" data-type="web">
+    <div class="project-header">
+      <h3>Art of the moment</h3>
+      <div class="tech-badges">
+        <span class="tech-badge python">Python</span>
+        <span class="tech-badge flask">Flask</span>
+        <span class="tech-badge jinja">Jinja</span>
+        <span class="tech-badge web-development">Web Development</span>
+        <span class="tech-badge rest-api">REST API</span>
+      </div>
+    </div>
+    <div class="project-description">
+      <p>A dynamic web application built to create an ever-changing artistic experience. It leverages the <a href="https://developers.artsy.net/" target="_blank" rel="noopener noreferrer">Artsy API</a> to fetch and display a new piece of artwork with each refresh.</p>
+      <br />
+      <p><em>Note: The Artsy public API was sunset in July 2025</em></p>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/ZaraTam/art" class="code-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>Source code
+      </a>
+    </div>
+  </div>
 
-<p>A new piece of artwork at each refresh</p>
+  <div class="project-card" data-tech="javascript html5 canvas" data-type="visualization">
+    <div class="project-header">
+      <h3>Solar system simulator</h3>
+      <div class="tech-badges">
+        <span class="tech-badge javascript">JavaScript</span>
+        <span class="tech-badge html5">HTML5 Canvas</span>
+        <span class="tech-badge animation">Animation</span>
+        <span class="tech-badge physics">Physics Simulation</span>
+      </div>
+    </div>
+    <div class="project-description">
+      <p>A solar system simulation built with JavaScript and the HTML5 Canvas API, modelling the orbital mechanics and positional relationships between celestial bodies</p>
+    </div>
+    <div class="project-links">
+      <a href="https://zaratam.github.io/solar-system/" class="code-link demo-link" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i>Live Demo
+      </a>
+      <a href="https://github.com/ZaraTam/solar-system" class="code-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>Source code
+      </a>
+    </div>
+  </div>
 
-<p>Built with: Python, Flask, Jinja</p>
+  <div class="project-card" data-tech="python data-analysis" data-type="data-analysis">
+    <div class="project-header">
+      <h3>Oyster card journeys</h3>
+      <div class="tech-badges">
+        <span class="tech-badge python">Python</span>
+        <span class="tech-badge numpy">NumPy</span>
+        <span class="tech-badge pandas">Pandas</span>
+        <span class="tech-badge matplotlib">Matplotlib</span>
+        <span class="tech-badge data-analysis">Data Analysis</span>
+        <span class="tech-badge data-visualization">Data Visualisation</span>
+      </div>
+    </div>
+    <div class="project-description">
+      <p>A data analysis and visualisation project using Python and key data science libraries to uncover insights into urban mobility from Transport for London (TfL) Oyster card journey data</p>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/ZaraTam/oyster/blob/master/oyster.ipynb" class="code-link demo-link" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-chart-bar"></i>Jupyter Notebook
+      </a>
+      <a href="https://github.com/ZaraTam/oyster" class="code-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>Source code
+      </a>
+    </div>
+  </div>
 
-<p><a href="https://github.com/ZaraTam/art" class="code-link" target="_blank" rel="noopener noreferrer">Source code</a></p>
+  <div class="project-card" data-tech="python data-analysis" data-type="visualization">
+    <div class="project-header">
+      <h3>K-means palette reducer</h3>
+      <div class="tech-badges">
+        <span class="tech-badge python">Python</span>
+        <span class="tech-badge machine-learning">Machine Learning</span>
+        <span class="tech-badge image-processing">Image Processing</span>
+        <span class="tech-badge algorithms">Algorithms</span>
+      </div>
+    </div>
+    <div class="project-description">
+      <p>This tool generates different artistic styles by reducing the number of colours in an image using the k-means clustering algorithm. It's useful for creating a simplified colour palette or for image compression.</p>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/ZaraTam/kmeans-palette-reducer" class="code-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>Source code
+      </a>
+    </div>
+  </div>
 
-<p><br /></p>
-
-<h3 id="solar-system-simulator">Solar system simulator</h3>
-
-<p>A revolving parallel universe</p>
-
-<p>Built with: HTML5 Canvas, Javascript</p>
-
-<p><a href="https://zaratam.github.io/solar-system/" class="code-link" target="_blank" rel="noopener noreferrer">Website</a>
-<a href="https://github.com/ZaraTam/solar-system" class="code-link" target="_blank" rel="noopener noreferrer">Source code</a></p>
-
-<p><br /></p>
-
-<h3 id="oyster-card-journeys">Oyster card journeys</h3>
-
-<p>Data analysis and visualization of Transport for London (TfL) journeys</p>
-
-<p>Built with: Python, NumPy, Pandas, Matplotlib, Jupyter Notebook</p>
-
-<p><a href="https://github.com/ZaraTam/oyster/blob/master/oyster.ipynb" class="code-link" target="_blank" rel="noopener noreferrer">Notebook</a>
-<a href="https://github.com/ZaraTam/oyster" class="code-link" target="_blank" rel="noopener noreferrer">Source code</a></p>
+  <div class="project-card" data-tech="html css jekyll" data-type="web">
+    <div class="project-header">
+      <h3>Personal Website</h3>
+      <div class="tech-badges">
+        <span class="tech-badge html5">HTML5</span>
+        <span class="tech-badge css3">CSS3</span>
+        <span class="tech-badge jekyll">Jekyll</span>
+        <span class="tech-badge sass">Sass</span>
+        <span class="tech-badge web-development">Web Development</span>
+        <span class="tech-badge responsive-design">Responsive Design</span>
+      </div>
+    </div>
+    <div class="project-description">
+      <p>A personal portfolio website built with Jekyll to showcase a curated collection of my creative work, including coding projects and paintings.</p>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/ZaraTam/website" class="code-link" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>Source code
+      </a>
+    </div>
+  </div>
+</div>
 
     <footer>
   <div class="footer-content">
@@ -89,9 +189,6 @@
       </a>
       <a href="https://github.com/zaratam" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <i class="fab fa-github"></i>
-      </a>
-      <a href="https://twitter.com/zaratam" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
       </a>
     </div>
 
