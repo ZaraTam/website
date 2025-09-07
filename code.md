@@ -111,7 +111,7 @@ permalink: /code
       </div>
     </div>
     <div class="project-description">
-      <p>A personal portfolio website built with Jekyll to showcase a curated collection of my creative work, including coding projects and paintings.</p>
+      <p>A personal portfolio website built with Jekyll to showcase a curated collection of my creative work, including coding projects and paintings</p>
     </div>
     <div class="project-links">
       <a href="https://github.com/ZaraTam/website" class="code-link" target="_blank" rel="noopener noreferrer">
