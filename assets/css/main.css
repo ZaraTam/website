@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   margin: 0;
-  padding: 0 120px;
+  padding: 0 20px;
   background-color: white;
   color: #333;
 }
@@ -118,7 +118,7 @@ a.code-link i {
 }
 
 img {
-  max-width: 40%;
+  max-width: 100%;
   height: auto;
   transition: opacity 0.3s ease;
 }
@@ -128,7 +128,7 @@ img:hover {
 }
 
 .responsive-image {
-  max-width: 40%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -872,13 +872,31 @@ a.code-link.demo-link:hover {
   color: #4a5568;
 }
 
-@media (max-width: 600px) {
-  .site-title {
-    font-size: 2em;
+/* Desktop - larger padding for wide screens */
+@media (min-width: 1200px) {
+  body {
+    padding: 0 120px;
   }
+}
+/* Tablet and larger mobile devices */
+@media (max-width: 1024px) {
+  body {
+    padding: 0 40px;
+  }
+}
+/* Mobile devices */
+@media (max-width: 768px) {
+  body {
+    padding: 0 20px;
+  }
+  /* Navigation responsive */
   nav ul li {
     display: block;
     margin: 10px 0;
+  }
+  .hero-section {
+    padding: 40px 0 20px 0;
+    margin-bottom: 40px;
   }
   .hero-title {
     font-size: 2.5rem;
@@ -889,17 +907,100 @@ a.code-link.demo-link:hover {
   .hero-description {
     font-size: 1.125rem;
   }
-  .interests-grid {
+  .section-title {
+    font-size: 1.75rem;
+  }
+  .interests-grid,
+  .experience-subsections {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   .achievements-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   .art-gallery {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .interest-card,
+  .experience-subsection,
+  .achievement-card,
+  .project-card {
+    padding: 24px;
+  }
+}
+/* Small mobile devices */
+@media (max-width: 600px) {
+  body {
+    padding: 0 15px;
+  }
+  .site-title {
+    font-size: 2em;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  .hero-description {
+    font-size: 1rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .section-title::after {
+    width: 150px;
+  }
+  .interest-card,
+  .experience-subsection,
+  .achievement-card,
+  .project-card {
+    padding: 20px;
+  }
+  .modal-content {
+    width: 95vw;
+    margin: 20px;
+  }
+  .modal-nav-button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .modal-nav-prev {
+    left: 10px;
+  }
+  .modal-nav-next {
+    right: 10px;
+  }
+}
+/* Extra small devices */
+@media (max-width: 480px) {
+  body {
+    padding: 0 10px;
+  }
+  nav a {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  .scroll-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  img {
+    max-width: 100%;
   }
 }
 
