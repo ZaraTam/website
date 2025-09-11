@@ -1,12 +1,10 @@
-<!-- DEBUG: page.url={{ page.url }}, site.baseurl={{ site.baseurl }} -->
 <nav>
   <ul>
     {% for item in site.data.navigation %}
       <li>
         {% assign nav_url = item.link | relative_url %}
         {% assign page_path = page.url | remove: site.baseurl %}
-        <!-- DEBUG: item.link={{ item.link }}, page_path={{ page_path }}, nav_url={{ nav_url }} -->
-        <a href="{{ nav_url }}" {% if page_path == item.link or page.url == item.link %} class="active"{% endif %}>
+        <a href="{{ nav_url }}" {% if page_path == item.link %} class="active"{% endif %}>
           {{ item.name }}
         </a>
       </li>
