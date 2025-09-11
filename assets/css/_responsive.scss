@@ -1,22 +1,67 @@
 /* Responsive design styles */
 
+/* Desktop - larger padding for wide screens */
+@media (min-width: 1200px) {
+  body {
+    padding: 0 120px;
+  }
+}
+
+/* Tablet and larger mobile devices */
+@media (max-width: 1024px) {
+  body {
+    padding: 0 40px;
+  }
+}
+
+/* Mobile devices */
 @media (max-width: 768px) {
   body {
     padding: 0 20px;
   }
   
-  /* Navigation responsive */
-  nav ul li {
-    display: block;
-    margin: 10px 0;
+  /* Navigation responsive - hamburger menu */
+  .hamburger {
+    display: flex !important;
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(250, 251, 252, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 12px 12px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0;
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    text-align: center;
+    padding: 16px 24px;
+    margin: 4px 0;
+    border-radius: 8px;
   }
 
   /* Home page responsive */
+  .hero-section {
+    padding: 40px 0 20px 0;
+    margin-bottom: 40px;
+  }
+
   .hero-title {
     font-size: 2.5rem;
   }
@@ -28,22 +73,33 @@
   .hero-description {
     font-size: 1.125rem;
   }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
   
-  .interests-grid {
+  .interests-grid,
+  .experience-subsections {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .achievements-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   
-  .achievement-card {
-    padding: 32px 24px;
+  .achievement-card,
+  .interest-card,
+  .experience-subsection,
+  .project-card {
+    padding: 24px;
   }
   
   /* Projects responsive */
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   
   .filter-bar {
@@ -63,10 +119,89 @@
   /* Art gallery responsive */
   .art-gallery {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   
   .project-card,
   .artwork-card {
     margin-bottom: 24px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 600px) {
+  body {
+    padding: 0 15px;
+  }
+  
+  .site-title {
+    font-size: 2em;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-title::after {
+    width: 150px;
+  }
+  
+  .interest-card,
+  .experience-subsection,
+  .achievement-card,
+  .project-card {
+    padding: 20px;
+  }
+
+  .modal-content {
+    width: 95vw;
+    margin: 20px;
+  }
+  
+  .modal-nav-button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .modal-nav-prev {
+    left: 10px;
+  }
+  
+  .modal-nav-next {
+    right: 10px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  body {
+    padding: 0 10px;
+  }
+  
+  nav a {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .scroll-arrow {
+    width: 40px;
+    height: 40px;
   }
 }
