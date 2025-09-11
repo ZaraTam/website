@@ -3,7 +3,8 @@
     {% for item in site.data.navigation %}
       <li>
         {% assign nav_url = item.link | relative_url %}
-        <a href="{{ nav_url }}" {% if page.url == item.link %} class="active"{% endif %}>
+        {% assign page_path = page.url | remove: site.baseurl %}
+        <a href="{{ nav_url }}" {% if page_path == item.link or page.url == item.link %} class="active"{% endif %}>
           {{ item.name }}
         </a>
       </li>
