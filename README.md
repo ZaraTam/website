@@ -21,6 +21,13 @@ A clean, responsive personal portfolio website built with Jekyll, showcasing cod
 ├── _layouts/
 │   └── default.html         # Main site layout
 ├── _site/                   # Generated site (auto-generated)
+├── .github/
+│   ├── workflows/
+│   │   ├── ci.yml           # CI pipeline
+│   │   └── deploy.yml       # GitHub Pages deployment
+│   ├── ISSUE_TEMPLATE/
+│   │   └── bug_report.md    # Bug report template
+│   └── dependabot.yml      # Dependabot configuration
 ├── assets/
 │   ├── art/                 # Artwork images
 │   ├── css/
@@ -32,15 +39,17 @@ A clean, responsive personal portfolio website built with Jekyll, showcasing cod
 │   │   ├── _navigation.scss # Navigation styles
 │   │   ├── _projects.scss   # Projects page styles
 │   │   ├── _responsive.scss # Responsive breakpoints
+│   │   ├── critical.scss    # Critical CSS for performance
 │   │   └── main.scss        # Main stylesheet (imports all)
 │   ├── images/              # Site images and favicons
 │   └── js/
-│       ├── art-gallery.js   # Art gallery lightbox functionality
 │       ├── home.js          # Home page interactions
 │       └── navigation.js    # Navigation functionality
-├── art.md                   # Art gallery page
-├── code.md                  # Projects/code page
-├── index.md                 # Home page
+├── .yamllint.yml           # YAML linting configuration
+├── 404.md                  # Custom 404 page
+├── art.md                  # Art gallery page
+├── code.md                 # Projects/code page
+├── index.md                # Home page
 └── README.md               # This file
 ```
 
