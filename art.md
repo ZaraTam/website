@@ -12,7 +12,7 @@ permalink: /art
 <div class="art-gallery">
   <div class="artwork-card">
     <div class="artwork-image">
-      <img src="{{ '/assets/art/fields-of-remembrance.jpg' | relative_url }}" alt="Fields of remembrance" loading="lazy" data-artwork-id="fields-of-remembrance" class="artwork-trigger" style="cursor: pointer;">
+      <img src="{{ '/assets/art/fields-of-remembrance.jpg' | relative_url }}" alt="Fields of remembrance" loading="lazy">
     </div>
     <div class="artwork-info">
       <h3>Fields of remembrance</h3>
@@ -27,7 +27,7 @@ permalink: /art
 
   <div class="artwork-card">
     <div class="artwork-image">
-      <img src="{{ '/assets/art/the-voyager.jpg' | relative_url }}" alt="The Voyager" loading="lazy" data-artwork-id="the-voyager" class="artwork-trigger" style="cursor: pointer;">
+      <img src="{{ '/assets/art/the-voyager.jpg' | relative_url }}" alt="The Voyager" loading="lazy">
     </div>
     <div class="artwork-info">
       <h3>The Voyager</h3>
@@ -42,7 +42,7 @@ permalink: /art
 
   <div class="artwork-card">
     <div class="artwork-image">
-      <img src="{{ '/assets/art/suspension.jpg' | relative_url }}" alt="Suspension" loading="lazy" data-artwork-id="suspension" class="artwork-trigger" style="cursor: pointer;">
+      <img src="{{ '/assets/art/suspension.jpg' | relative_url }}" alt="Suspension" loading="lazy">
     </div>
     <div class="artwork-info">
       <h3>Suspension</h3>
@@ -56,29 +56,3 @@ permalink: /art
   </div>
 </div>
 
-<!-- Modal -->
-<div id="imageModal" class="modal" onclick="closeModal()">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <span class="modal-close" onclick="closeModal()">&times;</span>
-    <div class="modal-image-container">
-      <button id="modalPrevButton" class="modal-nav-button modal-nav-prev" onclick="navigateToPrevious()" title="Previous image (←)">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <img id="modalImage" src="" alt="">
-      <button id="modalNextButton" class="modal-nav-button modal-nav-next" onclick="navigateToNext()" title="Next image (→)">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </div>
-    <div class="modal-info">
-      <h3 id="modalTitle"></h3>
-      <div class="modal-details">
-        <span id="modalYear"></span>
-        <span id="modalMedium"></span>
-        <span id="modalDimensions"></span>
-      </div>
-      <p id="modalDescription"></p>
-    </div>
-  </div>
-</div>
-
-<script src="{{ '/assets/js/art.js' | relative_url }}"></script>
