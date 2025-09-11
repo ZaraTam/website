@@ -2,9 +2,9 @@
   <ul>
     {% for item in site.data.navigation %}
       <li>
-        {% assign nav_url = item.link | relative_url %}
-        {% assign page_path = page.url | remove: site.baseurl %}
-        <a href="{{ nav_url }}" {% if page_path == item.link %} class="active"{% endif %}>
+        {% assign current_page = page.url | remove: site.baseurl | remove: '.html' %}
+        {% assign nav_link = item.link | remove: '.html' %}
+        <a href="{{ item.link | relative_url }}" {% if current_page == nav_link or (nav_link == '/' and current_page == '') %} class="active"{% endif %}>
           {{ item.name }}
         </a>
       </li>
