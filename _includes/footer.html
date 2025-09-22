@@ -1,10 +1,10 @@
 <footer>
   <div class="footer-content">
     <div class="social-icons">
-      <a href="https://www.linkedin.com/in/zaratam" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/zaratam" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" onclick="trackSocialClick('linkedin')">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://github.com/zaratam" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <a href="https://github.com/zaratam" target="_blank" rel="noopener noreferrer" aria-label="GitHub" onclick="trackSocialClick('github')">
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -12,3 +12,14 @@
     <p>&copy; {{ site.time | date: "%Y" }} - Created by Zara</p>
   </div>
 </footer>
+
+<script>
+function trackSocialClick(platform) {
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'social_click', {
+      event_category: 'social',
+      event_label: platform
+    });
+  }
+}
+</script>

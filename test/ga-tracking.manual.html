@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA Tracking Manual Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .test-element {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 15px;
+            background: #007cba;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .test-element:hover {
+            background: #005a87;
+        }
+        .card {
+            display: inline-block;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #f9f9f9;
+        }
+        .card:hover {
+            background: #e9e9e9;
+        }
+        #console {
+            background: #000;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+        .console-entry {
+            margin: 2px 0;
+        }
+        .timestamp {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <h1>Google Analytics Tracking Manual Test</h1>
+    <p>This page allows you to manually test GA tracking events. Check the console below to see fired events.</p>
+
+    <div class="test-section">
+        <h2>Navigation Tracking</h2>
+        <nav>
+            <a href="/" class="test-element nav-link">Home</a>
+            <a href="/code" class="test-element nav-link">Code</a>
+            <a href="/art" class="test-element nav-link">Art</a>
+        </nav>
+    </div>
+
+    <div class="test-section">
+        <h2>Homepage Cards</h2>
+        <h3>Interest Cards (What I Enjoy)</h3>
+        <div class="card interest-card">Complex Problem Solving</div>
+        <div class="card interest-card">Creative Craftsmanship</div>
+        <div class="card interest-card">Exploration & Discovery</div>
+        <div class="card interest-card">Impact & Conservation</div>
+
+        <h3>Experience Subsections (Where I Have Been)</h3>
+        <div class="card experience-subsection">Education</div>
+        <div class="card experience-subsection">Work</div>
+        <div class="card experience-subsection">Travel</div>
+
+        <h3>Achievement Cards</h3>
+        <div class="card achievement-card">Booking Hackathon</div>
+        <div class="card achievement-card">UK Exceptional Talent</div>
+    </div>
+
+    <div class="test-section">
+        <h2>Project Portfolio</h2>
+        <div class="card project-card">
+            Audio Blanket
+            <div class="project-links">
+                <a href="https://github.com/zaratam/audio-blanket" class="test-element">GitHub</a>
+                <a href="https://audioblanket.co" class="test-element demo-link">Demo</a>
+            </div>
+        </div>
+        <div class="card project-card">
+            Art of the Moment
+            <div class="project-links">
+                <a href="https://github.com/zaratam/art-moment" class="test-element">GitHub</a>
+                <a href="https://artmoment.co" class="test-element demo-link">Demo</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>External Organization Links</h2>
+        <a href="https://lonsar.com" class="test-element">Lonsar</a>
+        <a href="https://wildlondon.org.uk" class="test-element">Wildlife Trusts</a>
+        <a href="https://artsy.net/api" class="test-element">Artsy API</a>
+    </div>
+
+    <div class="test-section">
+        <h2>Art Gallery</h2>
+        <div class="card artwork-card">Fields of Remembrance</div>
+        <div class="card artwork-card">Voyager</div>
+        <div class="card artwork-card">Suspension</div>
+    </div>
+
+    <div class="test-section">
+        <h2>Scroll Indicator</h2>
+        <button class="test-element" onclick="testScrollIndicator()">Discover More (Scroll Test)</button>
+    </div>
+
+    <div id="console">
+        <div class="console-entry"><span class="timestamp">[Ready]</span> GA Tracking Test Console - Events will appear here</div>
+    </div>
+
+    <script>
+        // Mock gtag function that logs to our console
+        let eventCount = 0;
+        function gtag() {
+            eventCount++;
+            const args = Array.from(arguments);
+            const timestamp = new Date().toLocaleTimeString();
+            const consoleDiv = document.getElementById('console');
+
+            const entry = document.createElement('div');
+            entry.className = 'console-entry';
+            entry.innerHTML = `<span class="timestamp">[${timestamp}]</span> Event #${eventCount}: ${JSON.stringify(args, null, 2)}`;
+
+            consoleDiv.appendChild(entry);
+            consoleDiv.scrollTop = consoleDiv.scrollHeight;
+
+            // Also log to browser console
+            console.log('GA Event:', args);
+        }
+
+        // Mock window.location for testing
+        window.location = {
+            hostname: 'localhost',
+            pathname: '/test',
+            search: '?debug=1'
+        };
+
+        // Initialize tracking when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            setupNavigationTracking();
+            setupCardTracking();
+            setupProjectTracking();
+            setupExternalLinkTracking();
+            setupArtGalleryTracking();
+        });
+
+        // Navigation tracking
+        function setupNavigationTracking() {
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent actual navigation
+                    const linkText = this.textContent.trim().toLowerCase();
+                    const href = this.getAttribute('href');
+
+                    gtag('event', 'page_navigation', {
+                        event_category: 'navigation',
+                        event_label: linkText,
+                        page_path: href
+                    });
+                });
+            });
+        }
+
+        // Card tracking
+        function setupCardTracking() {
+            // Interest cards
+            document.querySelectorAll('.interest-card').forEach((card, index) => {
+                const cardNames = ['complex_problem_solving', 'creative_craftsmanship', 'exploration_discovery', 'impact_conservation'];
+                const cardName = cardNames[index] || `interest_card_${index}`;
+
+                card.addEventListener('mouseenter', function() {
+                    gtag('event', 'card_hover', {
+                        event_category: 'interaction',
+                        event_label: 'what_i_enjoy',
+                        card_name: cardName
+                    });
+                });
+
+                card.addEventListener('click', function() {
+                    gtag('event', 'card_click', {
+                        event_category: 'interaction',
+                        event_label: 'what_i_enjoy',
+                        card_name: cardName
+                    });
+                });
+            });
+
+            // Experience subsections
+            document.querySelectorAll('.experience-subsection').forEach((card, index) => {
+                const subsectionNames = ['education', 'work', 'travel'];
+                const subsectionName = subsectionNames[index] || `subsection_${index}`;
+
+                card.addEventListener('mouseenter', function() {
+                    gtag('event', 'card_hover', {
+                        event_category: 'interaction',
+                        event_label: 'where_i_have_been',
+                        subsection_name: subsectionName
+                    });
+                });
+
+                card.addEventListener('click', function() {
+                    gtag('event', 'card_click', {
+                        event_category: 'interaction',
+                        event_label: 'where_i_have_been',
+                        subsection_name: subsectionName
+                    });
+                });
+            });
+
+            // Achievement cards
+            document.querySelectorAll('.achievement-card').forEach((card, index) => {
+                const cardNames = ['booking_hackathon', 'uk_exceptional_talent'];
+                const cardName = cardNames[index] || `achievement_card_${index}`;
+
+                card.addEventListener('mouseenter', function() {
+                    gtag('event', 'card_hover', {
+                        event_category: 'interaction',
+                        event_label: 'achievements',
+                        card_name: cardName
+                    });
+                });
+
+                card.addEventListener('click', function() {
+                    gtag('event', 'card_click', {
+                        event_category: 'interaction',
+                        event_label: 'achievements',
+                        card_name: cardName
+                    });
+                });
+            });
+        }
+
+        // Project tracking
+        function setupProjectTracking() {
+            // Project card hovers
+            document.querySelectorAll('.project-card').forEach((card, index) => {
+                const projectNames = ['audio_blanket', 'art_of_the_moment', 'solar_system', 'oyster_journeys', 'kmeans_palette', 'personal_website'];
+                const projectName = projectNames[index] || `project_card_${index}`;
+
+                card.addEventListener('mouseenter', function() {
+                    gtag('event', 'card_hover', {
+                        event_category: 'interaction',
+                        event_label: 'code',
+                        card_name: projectName
+                    });
+                });
+
+                card.addEventListener('click', function(e) {
+                    if (e.target.tagName !== 'A' && !e.target.closest('a')) {
+                        gtag('event', 'card_click', {
+                            event_category: 'interaction',
+                            event_label: 'code',
+                            card_name: projectName
+                        });
+                    }
+                });
+            });
+
+            // Project links
+            document.querySelectorAll('.project-links a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent actual navigation
+                    const href = this.getAttribute('href');
+                    const projectCard = this.closest('.project-card');
+                    const projectIndex = Array.from(document.querySelectorAll('.project-card')).indexOf(projectCard);
+
+                    const projectNames = ['audio_blanket', 'art_of_the_moment', 'solar_system', 'oyster_journeys', 'kmeans_palette', 'personal_website'];
+                    const projectName = projectNames[projectIndex] || `project_${projectIndex}`;
+
+                    let linkType = 'external';
+                    if (href.includes('github.com')) {
+                        linkType = 'github';
+                    } else if (this.classList.contains('demo-link')) {
+                        linkType = 'demo';
+                    }
+
+                    gtag('event', 'link_click', {
+                        event_category: 'portfolio',
+                        event_label: linkType,
+                        project_name: projectName
+                    });
+                });
+            });
+        }
+
+        // External link tracking
+        function setupExternalLinkTracking() {
+            document.querySelectorAll('a[href^="http"]').forEach(link => {
+                if (!link.closest('.project-links')) { // Exclude project links (already handled)
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault(); // Prevent actual navigation
+                        const href = this.getAttribute('href');
+                        let label = 'external';
+
+                        if (href.includes('lonsar.com')) {
+                            label = 'lonsar';
+                        } else if (href.includes('wildlondon.org.uk') || href.includes('wildlife')) {
+                            label = 'wildlife_trusts';
+                        } else if (href.includes('artsy')) {
+                            label = 'artsy';
+                        }
+
+                        gtag('event', 'organization_click', {
+                            event_category: 'social',
+                            event_label: label
+                        });
+                    });
+                }
+            });
+        }
+
+        // Art gallery tracking
+        function setupArtGalleryTracking() {
+            document.querySelectorAll('.artwork-card').forEach((card, index) => {
+                const artworkNames = ['fields_of_remembrance', 'voyager', 'suspension'];
+                const artworkName = artworkNames[index] || `artwork_card_${index}`;
+
+                card.addEventListener('mouseenter', function() {
+                    gtag('event', 'card_hover', {
+                        event_category: 'interaction',
+                        event_label: 'artworks',
+                        card_name: artworkName
+                    });
+
+                    // Also track artwork view
+                    gtag('event', 'artwork_view', {
+                        event_category: 'art',
+                        event_label: artworkName
+                    });
+                });
+
+                card.addEventListener('click', function() {
+                    gtag('event', 'card_click', {
+                        event_category: 'interaction',
+                        event_label: 'artworks',
+                        card_name: artworkName
+                    });
+                });
+            });
+        }
+
+        // Scroll indicator test
+        function testScrollIndicator() {
+            gtag('event', 'scroll_indicator_click', {
+                event_category: 'engagement',
+                event_label: 'discover_more'
+            });
+        }
+
+        // Add some helpful features
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'c' && e.ctrlKey) {
+                document.getElementById('console').innerHTML = '<div class="console-entry"><span class="timestamp">[Cleared]</span> Console cleared</div>';
+                eventCount = 0;
+            }
+        });
+
+        // Show initial status
+        gtag('config', 'G-G2DKGS3Y13', {
+            debug_mode: true
+        });
+    </script>
+
+    <div style="margin-top: 30px; padding: 15px; background: #f0f0f0; border-radius: 5px;">
+        <h3>Test Instructions:</h3>
+        <ul>
+            <li>Click, hover, and interact with elements above</li>
+            <li>Watch the console below for GA event tracking</li>
+            <li>Press <code>Ctrl+C</code> to clear the console</li>
+            <li>All events include debug information and proper categorization</li>
+            <li>Test on mobile devices to verify touch interactions work</li>
+        </ul>
+    </div>
+</body>
+</html>

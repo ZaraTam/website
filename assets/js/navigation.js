@@ -16,4 +16,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Navigation tracking
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const linkText = this.textContent.trim().toLowerCase();
+      const href = this.getAttribute('href');
+
+      // Track navigation events
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_navigation', {
+          event_category: 'navigation',
+          event_label: linkText,
+          page_path: href
+        });
+      }
+    });
+  });
+
 });

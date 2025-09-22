@@ -56,7 +56,20 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-G2DKGS3Y13');
+      // Enable debug mode if running locally or if debug parameter is present
+      const isDebugMode = window.location.hostname === 'localhost' ||
+                         window.location.hostname === '127.0.0.1' ||
+                         new URLSearchParams(window.location.search).has('debug');
+
+      gtag('config', 'G-G2DKGS3Y13', {
+        debug_mode: isDebugMode
+      });
+
+      // Log debug info to console if in debug mode
+      if (isDebugMode) {
+        console.log('GA4 Debug Mode enabled');
+        console.log('Add ?debug=1 to URL or view in localhost to enable debug mode');
+      }
     </script>
   </head>
   <body>
@@ -75,6 +88,9 @@
     <script src="{{ '/assets/js/navigation.js' | relative_url }}" defer></script>
     {% if page.url == '/' %}
       <script src="{{ '/assets/js/home.js' | relative_url }}" defer></script>
+    {% endif %}
+    {% if page.url == '/code' %}
+      <script src="{{ '/assets/js/code.js' | relative_url }}" defer></script>
     {% endif %}
     {% if page.url == '/art' %}
       <script src="{{ '/assets/js/art-gallery.js' | relative_url }}" defer></script>
