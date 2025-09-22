@@ -7,6 +7,28 @@ permalink: /code
 
 
 <div class="projects-grid">
+  <div class="project-card" data-tech="react typescript vite" data-type="web">
+    <div class="project-header">
+      <h3>Audio Blanket</h3>
+      <div class="tech-badges">
+        <span class="tech-badge react">React</span>
+        <span class="tech-badge typescript">TypeScript</span>
+        <span class="tech-badge vite">Vite</span>
+        <span class="tech-badge tailwind">Tailwind CSS</span>
+        <span class="tech-badge web-audio">Web Audio API</span>
+        <span class="tech-badge responsive-design">Responsive Design</span>
+      </div>
+    </div>
+    <div class="project-description">
+      <p>A web application for personalised ambient soundscapes with beautiful visual backgrounds. Features ambient sounds, noise generation, and responsive design with advanced audio controls using the Web Audio API.</p>
+    </div>
+    <div class="project-links">
+      <a href="https://audioblanket.co/" class="code-link demo-link" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i>Live Demo
+      </a>
+    </div>
+  </div>
+
   <div class="project-card" data-tech="python flask" data-type="web">
     <div class="project-header">
       <h3>Art of the moment</h3>
